@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+:root {
+    --navy: #001f3f;
+    --navy-light: #003366;
+    --gold: #FFD700;
+    --gold-dark: #ccac00;
+}
+
+body {
+    font-family: 'Almarai', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background Image Integration */
+.bg-overlay {
+    background-image: url('https://r2-bucket.flowith.net/f/750945fefa19e1da/saudi_construction_and_utilities_background_index_1%401024x1024.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.15;
+    filter: grayscale(30%);
+}
+
+.kpi-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.kpi-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+canvas {
+    width: 100% !important;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--navy);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+}
+
+/* Table Enhancements */
+#orders-table tr {
+    transition: background 0.2s;
+}
+
+#orders-table tr:hover {
+    background-color: rgba(0, 31, 63, 0.02);
+}
+
+/* Custom UI Components */
+.gap-card-pulse {
+    animation: borderPulse 2s infinite;
+}
+
+@keyframes borderPulse {
+    0% { border-color: rgba(255, 215, 0, 0.2); }
+    50% { border-color: rgba(255, 215, 0, 0.8); }
+    100% { border-color: rgba(255, 215, 0, 0.2); }
+}
+
+/* RTL Adjustments */
+aside {
+    right: 0;
+    left: auto;
+}
+
+main {
+    margin-right: 16rem;
+    margin-left: 0;
+}
+
+@media (max-width: 1024px) {
+    aside {
+        transform: translateX(100%);
+    }
+    main {
+        margin-right: 0;
+    }
+    aside.active {
+        transform: translateX(0);
+    }
+}

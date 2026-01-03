@@ -1,0 +1,69 @@
+:root {
+    --apple-gray-1: #f5f5f7;
+    --apple-gray-2: #e8e8ed;
+    --apple-blue: #0071e3;
+    --sidebar-width: 280px;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: var(--apple-gray-1);
+    color: #1d1d1f;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #d2d2d7;
+    border-radius: 10px;
+}
+
+/* Sidebar Layout */
+.nav-link {
+    @apply flex items-center gap-3 px-4 py-3 text-slate-500 rounded-xl transition-all duration-200 hover:bg-slate-50 hover:text-blue-600;
+}
+
+.nav-link.active {
+    @apply bg-blue-50 text-blue-600 font-bold;
+}
+
+.badge {
+    @apply mr-auto text-[10px] px-1.5 py-0.5 bg-slate-100 text-slate-400 rounded-md font-bold;
+}
+
+/* Card Styling - Jony Ive inspired */
+.kpi-card {
+    @apply bg-white p-6 rounded-[24px] shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/5;
+}
+
+.chart-container {
+    @apply bg-white p-8 rounded-[24px] shadow-sm border border-gray-100;
+}
+
+/* Insight Item */
+.insight-item {
+    @apply p-4 bg-gray-50 rounded-2xl border-r-4 border-blue-500 transition-transform duration-200 hover:translate-x-[-4px];
+}
+
+/* Glassmorphism elements */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Layout adjustments for RTL */
+[dir="rtl"] .ml-auto {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+[dir="rtl"] .border-l {
+    border-right-width: 0;
+    border-left-width: 1px;
+}
